@@ -9,3 +9,4 @@ models/
 wandb/
 outputs/
 notebooks/
+results.csv

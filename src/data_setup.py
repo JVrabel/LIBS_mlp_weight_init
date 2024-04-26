@@ -45,7 +45,7 @@ def create_dataloaders(
     wavelengths = X.columns
 
     X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=split_rate, random_state=random_st, stratify=samples, shuffle=True)
-    del y, samples, X_new
+    del y, samples, X
     
     y_train = y_train-1
     y_val = y_val-1

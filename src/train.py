@@ -103,9 +103,12 @@ if save_model:
 device = torch.device('cpu')
 model.to(device)
 
+shell = win32com.client.Dispatch("WScript.Shell")
+shortcut_test = shell.CreateShortCut('data/contest_TEST.h5.lnk')
+test_dir = shortcut_test.Targetpath
+
 test_labels_dir = "data/test_labels.csv"
 #model_dir = 'models/L1_lambda_0.002_model.pth'
-test_dir = "data/contest_TEST.h5"
 test_dataloader, y_test = create_test_dataloader(test_dir=test_dir,
                                                 test_labels_dir=test_labels_dir,
                                                 batch_size=BATCH_SIZE,
