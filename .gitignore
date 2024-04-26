@@ -4,3 +4,8 @@ dist/
 *.ipynb_output
 src/__pycache__/
 __pycache__/
+data/
+models/
+wandb/
+outputs/
+notebooks/
